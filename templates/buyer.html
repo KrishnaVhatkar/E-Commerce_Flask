@@ -1,0 +1,21 @@
+<!-- buyer.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Page</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <h2>Products for Sale:</h2>
+    <ul>
+        {% for product in products %}
+            <li>
+                {{ product.name }} - {{ product.price_range }}
+                <a href="/product/{{ product.pro_id }}">View Details</a>
+                <a href="#">Buy Now</a>
+                
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
